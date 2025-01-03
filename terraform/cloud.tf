@@ -118,7 +118,8 @@ resource "aws_security_group" "vpn" {
     protocol = "-1"
     cidr_blocks = [
       var.tunnel_1_inside_cidr,
-      var.tunnel_2_inside_cidr
+      var.tunnel_2_inside_cidr,
+      var.physical_interface_address
     ]
     from_port   = 0
     to_port     = 0
